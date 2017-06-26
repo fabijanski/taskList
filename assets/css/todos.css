@@ -1,9 +1,9 @@
 * {
-  font-family: 'Khand', sans-serif;
-  border: none;
+  /*border: none;*/
 }
 
 body {
+  font-family: 'Khand', sans-serif;
   background: #16222A;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #16222A, #3A6073);
@@ -15,7 +15,7 @@ body {
 h1 {
   background: #285d23;
   text-align: center;
-  color: white;
+  color: #fff;
   margin: 0;
   padding: 5px 20px;
   text-transform: uppercase;
@@ -28,7 +28,6 @@ input {
   font-size: 18px;
   width: 100%;
   padding: 13px 13px 13px 23px;
-  border: none;
   box-sizing: border-box;
   color: #285d23;
   /* border for container alignment */
@@ -38,7 +37,7 @@ input {
 
 input:focus {
   background: #fff;
-  border: 3px solid #62cd19;
+  border-color: #62cd19;
 }
 
 ul {
@@ -61,13 +60,13 @@ li:nth-child(2n+1) {
 }
 
 li:hover {
-  border-left: 3px solid #62cd19;
-  border-right: 3px solid #62cd19;
+  border-left-color: #62cd19;
+  border-right-color: #62cd19;
 }
 
 li:hover span {
   width: 40px;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 span {
@@ -82,45 +81,59 @@ span {
   opacity: 0;
 }
 
-button {
+#restore-button {
   width: 300px;
-  display: none;
-  /*opacity: 0;*/
   height: 40px;
   margin: 0;
   padding: 0;
   background: #285d23;
   color: #fff;
   border: none;
+  text-transform: uppercase;
+  display: none;
 }
 
-button:hover {
+#restore-button:hover {
   background: #78ee27;
 }
 
 /*when the task is done (clicked)*/
 .completed {
-  color: gray;
+  color: #858585;
   text-decoration: line-through;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-.fa-plus {
+#new-task-button {
+  background-color: #285d23;
+  /*outline: none;*/
+  border: none;
   float: right;
-  padding-top: 6px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
-#container {
+#new-task-button i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.container {
   width: 300px;
   margin: 100px auto;
   background: #f7f7f7;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-#pop-up {
+.pop-up {
   font-size: 12px;
   text-align: center;
-  height: 0px;
+  text-transform: uppercase;
+  height: 0;
   width: 70px;
   top: -10px;
   right: 0;
